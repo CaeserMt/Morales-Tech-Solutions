@@ -183,10 +183,9 @@ header nav ul li a:hover {
 
 .contact form {
     display: flex;
-
     flex-direction: column; /* Mantiene los elementos en columna */
     align-items: center; /* Centra horizontalmente los elementos */
-     
+    width: 100%; /* Asegura que ocupe el 100% del ancho */
 }
 
 .contact label {
@@ -204,9 +203,19 @@ header nav ul li a:hover {
 }
 
 .contact button {
-     align-self: center; /* Centra solo el botón */
-    margin-top: var(--spacing-medium); /* Espaciado superior para el botón */
-
+    margin: var(--spacing-medium) auto; /* Margen automático a los lados para centrar */
+    background-color: var(--color-secundaria);
+    color: var(--color-texto);
+    border-radius: 5px; /* Bordes redondeados */
+    padding: var(--spacing-small) var(--spacing-medium);
+    font-family: var(--fuente-krona);
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 0 10px var(--color-hover), 0 0 20px var(--color-hover), 0 0 30px var(--color-hover);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none; /* Quitar subrayado del enlace */
+}
    
 
 /* Botones con Efecto Neón */
