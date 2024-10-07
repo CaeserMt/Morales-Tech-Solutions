@@ -203,7 +203,10 @@ header nav ul li a:hover {
 }
 
 .contact button {
-    margin: var(--spacing-medium) auto; /* Margen automático a los lados para centrar */
+    align-self: center; /* Centra solo el botón */
+    margin-top: var(--spacing-medium); /* Espaciado superior para el botón */
+    
+    /* Botones con Efecto Neón */
     background-color: var(--color-secundaria);
     color: var(--color-texto);
     border-radius: 5px; /* Bordes redondeados */
@@ -215,6 +218,8 @@ header nav ul li a:hover {
     box-shadow: 0 0 10px var(--color-hover), 0 0 20px var(--color-hover), 0 0 30px var(--color-hover);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     text-decoration: none; /* Quitar subrayado del enlace */
+    display: block; /* Asegura que sea un bloque para que los márgenes funcionen */
+    width: auto; /* O el ancho deseado */
 }
    
 
