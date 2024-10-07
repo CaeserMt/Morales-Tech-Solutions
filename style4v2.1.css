@@ -183,7 +183,7 @@ header nav ul li a:hover {
 
 .contact form {
     display: flex;
-    flex-direction: column; /* Hacer el formulario en columna */
+     /* Hacer el formulario en columna */
     align-items: center; /* Centrar elementos en el eje horizontal */
 }
 
