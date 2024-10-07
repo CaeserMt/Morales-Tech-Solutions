@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morales Tech Solutions</title>
+    <link rel="stylesheet" href="style4v2.1.css">
+</head>
+<body>
+    <header class="navbar">
+        <img src="img/LOGO.jpg" alt="Logo de Morales Tech Solutions" class="logo" aria-label="Logo de Morales Tech Solutions">
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#about">Sobre Nosotros</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" aria-label="Abrir menú">&#9776;</div> <!-- Icono para menú móvil -->
+    </header>
+
+    <main class="contenedor">
+        <!-- Sección de Presentación -->
+        <section id="about" class="about-us">
+            <h1>Bienvenido a Morales Tech Solutions</h1>
+            <p>Somos una empresa especializada en brindar soluciones tecnológicas para todo tipo de dispositivos. Nos enfocamos en el mantenimiento, reparación, y optimización de equipos como laptops, PCs de escritorio, y más. Contamos con personal capacitado y utilizamos las mejores herramientas del mercado para ofrecerte un servicio confiable y de alta calidad.</p>
+        </section>
+
+        <!-- Sección de Servicios -->
+        <section id="services" class="services">
+            <h2>Nuestros Servicios</h2>
+            <ul>
+                <li><strong>Mantenimiento de laptops</strong>: Limpieza profunda, cambio de pasta térmica (NOCTUA NT-H1, Artic MX-4) y reemplazo de pads térmicos.</li>
+                <li><strong>Reparación de PCs de escritorio</strong>: Ensamblaje, actualización de componentes y diagnóstico de fallas.</li>
+                <li><strong>Optimización de equipos</strong>: Mejoramos el rendimiento de tu equipo ajustando el sistema operativo y hardware.</li>
+                <li><strong>Soporte Técnico</strong>: Asistencia remota y presencial para solucionar problemas de software y hardware.</li>
+            </ul>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section id="contact" class="contact">
+            <h2>Contáctanos</h2>
+            <p>¿Tienes alguna consulta o necesitas nuestros servicios? ¡No dudes en contactarnos!</p>
+            <form id="contact-form">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="Tu nombre" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" placeholder="Escribe tu mensaje aquí..." rows="4" required></textarea>
+
+                <button type="submit">Enviar mensaje por WhatsApp</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Morales Tech Solutions - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
