@@ -42,7 +42,7 @@ header.navbar {
     display: flex;
     align-items: center; /* Alinear en el centro */
     position: relative;
-    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+    box-shadow: 10 2px 4px rgba(255, 255, 255, 0.5);
 }
 
 header.navbar nav {
@@ -80,6 +80,72 @@ header nav ul li a {
     padding: var(--spacing-small); /* Espaciado alrededor del texto */
     border-radius: 5px; /* Bordes redondeados */
 }
+
+/* ESTILO SERVICE */
+
+.services {
+    padding: var(--spacing-large); /* Espaciado alrededor de la sección */
+    text-align: center;            /* Centrar el texto */
+}
+
+.service-container {
+    display: flex;                 /* Usar flexbox */
+    flex-wrap: wrap;              /* Permitir que los elementos se envuelvan */
+    justify-content: center;       /* Centrar los elementos horizontalmente */
+}
+
+.service-block {
+    display: flex;                 /* Flex para el contenido interno */
+    flex-direction: column;        /* Colocar contenido en columna */
+    align-items: center;           /* Centrar el contenido */
+    width: calc(25% - 40px);      /* Ancho de los bloques */
+    margin: 20px;                 /* Espaciado entre bloques */
+    border: 1px solid #ccc;       /* Borde del bloque */
+    border-radius: 10px;          /* Bordes redondeados */
+    padding: var(--spacing-medium); /* Espaciado interno */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para un efecto de profundidad */
+    transition: transform 0.3s ease; /* Efecto de transformación al pasar el ratón */
+}
+
+.service-block img {
+    max-width: 100%;              /* Hacer que la imagen se ajuste al contenedor */
+    border-radius: 10px;          /* Bordes redondeados para la imagen */
+}
+
+.service-block h3 {
+    margin: 10px 0;               /* Margen para el título */
+    font-size: 1.2rem;            /* Tamaño del texto del título */
+}
+
+.service-block p {
+    font-size: 1rem;              /* Tamaño del texto del párrafo */
+}
+
+/* Efecto al pasar el ratón */
+.service-block:hover {
+    transform: translateY(-5px);  /* Levantar el bloque al pasar el ratón */
+}
+
+/* Responsividad */
+@media (max-width: 1200px) {
+    .service-block {
+        width: calc(33.33% - 40px); /* 3 bloques en pantallas medianas */
+    }
+}
+
+@media (max-width: 900px) {
+    .service-block {
+        width: calc(50% - 40px); /* 2 bloques en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 600px) {
+    .service-block {
+        width: 100%; /* 1 bloque en pantallas pequeñas */
+    }
+}
+
+
 
 /* Efecto hover en los enlaces del menú */
 header nav ul li a:hover {
@@ -177,6 +243,8 @@ header nav ul li a:hover {
 
 /* Estilos de contacto */
 .contact {
+
+  
     padding: var(--spacing-large) 15%; /* Añadir espaciado en la sección de contacto */
 }
 
@@ -205,6 +273,7 @@ header nav ul li a:hover {
 
 /* Botones con Efecto Neón */
 button {
+ 
     background-color: var(--color-secundaria);
     color: var(--color-texto);
     border: none;
@@ -213,7 +282,7 @@ button {
     font-size: 1rem;
     text-transform: uppercase;
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 20px; /* Ajusta este valor para modificar el redondeo */
     box-shadow: 0 0 10px var(--color-hover), 0 0 20px var(--color-hover), 0 0 30px var(--color-hover);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -232,7 +301,7 @@ footer {
     font-family: var(--fuente-krona);
     font-size: 1rem;
     position: relative;
-    box-shadow: 0 -2px 4px rgba(233, 233, 233, 0.5); /* Sombra más sutil en la parte superior del footer */
+    box-shadow: 1 -2px 4px rgba(233, 233, 233, 0.5); /* Sombra más sutil en la parte superior del footer */
 }
 
 footer .social-media {
