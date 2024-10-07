@@ -81,6 +81,72 @@ header nav ul li a {
     border-radius: 5px; /* Bordes redondeados */
 }
 
+/* Estilos para la sección de Visión, Misión y Valores de manera didáctica */
+.vision-mision-didactica {
+    padding: var(--spacing-large) 5%;
+    background-color: var(--color-fondo);
+    text-align: center;
+}
+
+.vision-mision-didactica .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.vision-mision-didactica .card {
+    background-color: rgb(114, 96, 183);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    margin: 20px;
+    transition: transform 0.3s;
+}
+
+.vision-mision-didactica .card:hover {
+    transform: translateY(-10px);
+}
+
+.vision-mision-didactica .card-icon img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.vision-mision-didactica .card-content h3 {
+    font-family: var(--fuente-krona);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--color-hover);
+}
+
+.vision-mision-didactica .card-content p, .vision-mision-didactica .card-content ul {
+    font-family: var(--fuente-montserrat);
+    font-size: 1rem;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.vision-mision-didactica .card-content ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.vision-mision-didactica .card-content ul li {
+    margin-bottom: 10px;
+}
+
+.vision-mision-didactica .card-content ul li strong {
+    color: var(--color-secundaria);
+}
+
+
+
+
+
+
 /* ESTILO SERVICE */
 
 .services {
@@ -206,7 +272,7 @@ header nav ul li a {
     }
 
     .banner-text p {
-        font-size: 14px;
+        font-size: 15px;
     }
 }
 
@@ -374,7 +440,7 @@ button:hover {
 
 /* Footer con íconos de redes sociales */
 footer {
-    background-color: var(--color-primaria);
+    background: linear-gradient(90deg, var(--color-primaria), var(--color-secundaria));
     color: var(--color-texto);
     text-align: center;
     padding: var(--spacing-medium) 0;
@@ -401,4 +467,3 @@ footer .social-media a:hover {
     color: var(--color-hover);
     box-shadow: 0 0 10px var(--color-hover), 0 0 15px var(--color-hover);
 }
-
