@@ -178,11 +178,13 @@ header nav ul li a:hover {
 /* Estilos de contacto */
 .contact {
     padding: var(--spacing-large) 15%; /* Añadir espaciado en la sección de contacto */
+    text-align: center; /* Centrar el contenido */
 }
 
 .contact form {
     display: flex;
     flex-direction: column; /* Hacer el formulario en columna */
+    align-items: center; /* Centrar elementos en el eje horizontal */
 }
 
 .contact label {
@@ -213,8 +215,12 @@ button {
     font-size: 1rem;
     text-transform: uppercase;
     cursor: pointer;
+    border-radius: 25px; /* Bordes redondeados */
     box-shadow: 0 0 10px var(--color-hover), 0 0 20px var(--color-hover), 0 0 30px var(--color-hover);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    
+    text-decoration: none; /* Quitar subrayado del enlace */
+    margin-top: var(--spacing-medium); /* Espaciado superior para el botón de WhatsApp */
 }
 
 button:hover {
