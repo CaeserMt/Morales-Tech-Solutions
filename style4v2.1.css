@@ -209,7 +209,7 @@ header nav ul li a:hover {
 button {
     background-color: var(--color-secundaria);
     color: var(--color-texto);
-    border-radius: 25px; /* Bordes redondeados */
+    border-radius: 5px; /* Bordes redondeados */
     padding: var(--spacing-small) var(--spacing-medium);
     font-family: var(--fuente-krona);
     font-size: 1rem;
