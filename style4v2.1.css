@@ -206,20 +206,6 @@ header nav ul li a:hover {
     align-self: center; /* Centra solo el botón */
     margin-top: var(--spacing-medium); /* Espaciado superior para el botón */
     
-    /* Botones con Efecto Neón */
-    background-color: var(--color-secundaria);
-    color: var(--color-texto);
-    border-radius: 5px; /* Bordes redondeados */
-    padding: var(--spacing-small) var(--spacing-medium);
-    font-family: var(--fuente-krona);
-    font-size: 1rem;
-    text-transform: uppercase;
-    cursor: pointer;
-    box-shadow: 0 0 10px var(--color-hover), 0 0 20px var(--color-hover), 0 0 30px var(--color-hover);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    text-decoration: none; /* Quitar subrayado del enlace */
-    display: block; /* Asegura que sea un bloque para que los márgenes funcionen */
-    width: auto; /* O el ancho deseado */
 }
    
 
