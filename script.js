@@ -44,3 +44,8 @@ function showNextSlide() {
 setInterval(showNextSlide, 5000);
 
 
+
+// Cambia de imagen cada 5 segundos
+setInterval(showNextSlide, 5000);
+
+
