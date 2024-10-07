@@ -10,8 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
     const contactForm = document.getElementById("contact-form");
 
@@ -28,3 +26,21 @@ document.addEventListener("DOMContentLoaded", function () {
         contactForm.reset(); // Limpiar el formulario después de enviar
     });
 });
+
+
+// script.js
+
+let currentIndex = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showNextSlide() {
+    slides[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % slides.length;
+    slides[currentIndex].classList.add('active');
+    document.querySelector('.slides').style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+// Cambia de imagen cada 5 segundos
+setInterval(showNextSlide, 5000);
+
+
