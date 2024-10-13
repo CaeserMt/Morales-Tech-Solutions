@@ -183,7 +183,7 @@ header nav ul li a {
 .service-block h3 {
     /* margin: 10px 0;               /* Margen para el título */
      /* font-size: 1.2rem;            /* Tamaño del texto del título */
-
+     color: var(--color-texto);
      font-size: 1.4rem;
     margin: 0.5rem 0; /* Añadir márgenes uniformes arriba y abajo */
     font-weight: bold; /* Resaltar el título */
@@ -194,7 +194,7 @@ header nav ul li a {
 
     font-size: 1.0rem;
     line-height: 1.5; /* Ajustar el espacio entre líneas */
-    color: #666; /* Color de texto más suave para el párrafo */
+    color: #000000; /* Color de texto más suave para el párrafo */
     margin-top: 1rem;
     margin-bottom: 1.5rem;
 }
