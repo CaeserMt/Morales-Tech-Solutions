@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
 
 :root {
-    --color-fondo: #8a8ad7; /* Fondo oscuro *//* Fondo oscuro */
+    --color-fondo: #8a8ad7; /* Fondo oscuro */
     --color-primaria: #97d0f1; /* Azul profundo */
     --color-secundaria: #9772d2; /* Rojo vibrante */
     --color-hover: #f3f3f3; /* Cian brillante */
@@ -23,26 +23,48 @@
     box-sizing: border-box;
 }
 
-body {
+/*body {
     font-family: var(--fuente-montserrat);
     background-color: var(--color-fondo);
     color: var(--color-texto);
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Aumentar el mínimo a 100vh para cubrir toda la pantalla */
+  /*  line-height: 1.6;
+/*}
+/*
+
+/* Aplica el fondo en el cuerpo del documento */
+body {
+    font-family: var(--fuente-montserrat);
+    background: var(--color-fondo); /* Imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño para que cubra toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita */
+    color: var(--color-texto);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     line-height: 1.6;
+
+    margin: 0; /* Remover márgenes por defecto */
+    padding-top: 0px; /* Asegúrate de que el contenido comience debajo del menú */
 }
+
 
 /* Estilos del menú */
 
-
 header.navbar {
-    padding: var(--spacing-small) 5%; /* Espaciado en el navbar */
+    padding: var(--spacing-small) 3%; /* Espaciado en el navbar */
     background: linear-gradient(90deg, var(--color-primaria), var(--color-secundaria));
     display: flex;
     align-items: center; /* Alinear en el centro */
-    position: relative;
-    box-shadow: 10 2px 4px rgba(255, 255, 255, 0.5);
+    /*position: fixed; /* Mantiene el menú en la parte superior */
+    /*top: 0; /* Posición en la parte superior */
+    left: 0; /* Asegura que ocupe todo el ancho */
+    width: 100%; /* Tomar el 100% del ancho */
+    z-index: 1000; /* Asegura que el menú esté en un nivel superior */
+    box-shadow: 10px 2px 4px rgba(255, 255, 255, 0.5);
 }
 
 header.navbar nav {
@@ -52,13 +74,11 @@ header.navbar nav {
 }
 
 header.navbar img {
-    
     max-width: 50px; /* Reducir el tamaño de la imagen */
     border-radius: 50%; /* Aplica la imagen en formato circular */
     object-fit: cover; /* Ajusta la imagen al contenedor sin distorsionarla */
     margin-right: var(--spacing-medium); /* Espaciado a la derecha de la imagen */
 }
-
 
 header nav ul {
     list-style: none;
@@ -69,7 +89,9 @@ header nav ul {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     padding: var(--spacing-small);
     margin: 0; /* Remover el margen para evitar desalineaciones */
+    
 }
+
 header nav ul li a {
     color: var(--color-texto);
     font-family: var(--fuente-krona);
@@ -80,6 +102,36 @@ header nav ul li a {
     padding: var(--spacing-small); /* Espaciado alrededor del texto */
     border-radius: 5px; /* Bordes redondeados */
 }
+
+/*link logos*/
+.social-icons {
+    display: flex;
+    justify-content: center; /* Centra los íconos horizontalmente */
+    align-items: center; /* Alinear verticalmente los íconos */
+    flex-grow: 1; /* Permite que el contenedor crezca y ocupe el espacio disponible */
+
+}
+
+.social-icon {
+    display: inline-block; /* Asegura que los iconos se muestren en línea */
+    margin-right: var(--spacing-medium); /* Espaciado a la derecha de la imagen */
+}
+
+.social-icon img {
+    width: 3cqh; /* Ajusta el tamaño del icono según sea necesario */
+    height: auto; /* Mantiene la proporción */
+    transition: transform 0.3s ease; /* Efecto de transición */
+}
+
+.social-icon:hover img {
+    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+}
+
+/* Para evitar margen extra en el último icono */
+.social-icon:last-child {
+    margin-right: 0; /* Remover margen en el último icono */
+}
+
 
 /* Estilos para la sección de Visión, Misión y Valores de manera didáctica */
 .vision-mision-didactica {
@@ -240,6 +292,7 @@ header nav ul li a {
 
 .slide {
     width: 100%;
+
     position: relative;
     flex-shrink: 0;
 }
@@ -259,6 +312,19 @@ header nav ul li a {
     padding: 10px;
     border-radius: 5px;
 }
+
+/* Agregamos animación de opacidad para las imágenes */
+.slide {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+
+
 
 .banner-text h2 {
     margin: 0;
@@ -296,6 +362,7 @@ header nav ul li a {
 
 
 /* Efecto hover en los enlaces del menú */
+
 header nav ul li a:hover {
     color: var(--color-hover);
     transform: scale(1.05); /* Efecto de escalado al pasar el mouse */
