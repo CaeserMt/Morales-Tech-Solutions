@@ -1,0 +1,183 @@
+/* Estilo para el botón */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 20px; /* Espacio superior para que no tape el título */
+    align-self: center; /* Centra el botón horizontalmente en su contenedor */
+}
+
+/* Estilos para asegurar que el contenido se vea bien */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh; /* Para que el contenido ocupe al menos la altura completa de la pantalla */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenedor principal */
+main {
+    flex: 1; /* Hace que el main ocupe todo el espacio disponible */
+    padding: 20px;
+    text-align: justify; /* Justifica el texto en el contenido principal */
+}
+
+/* Footer siempre al fondo */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, var(--color-primaria), var(--color-secundaria));
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Cambiar a relative para poder posicionar el botón en el flujo */
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Agrega este nuevo contenedor para título y botón */
+.title-button-container {
+    display: flex; /* Usa flexbox para alinear elementos */
+    flex-direction: column; /* Alinea en columna */
+    align-items: center; /* Centra horizontalmente */
+    margin-bottom: 20px; /* Espacio debajo de la sección del título */
+}
+
+section h2 {
+    font-size: 1.8rem; /* Título secundario */
+    margin: 20px 0 10px; /* Espacio alrededor */
+    text-align: justify; /* Justifica el texto del título */
+}
+
+section h3 {
+    font-size: 1.5rem; /* Título de servicios */
+    margin: 15px 0; /* Espacio alrededor */
+    text-align: justify; /* Justifica el texto del título */
+}
+
+section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 10px 0;
+    text-align: justify; /* Justifica el texto del párrafo */
+}
+
+/* Estilos para la galería de imágenes */
+.image-gallery {
+    display: flex; /* Alinear imágenes en una fila */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    margin: 20px 0; /* Espaciado superior e inferior para la galería */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en filas múltiples */
+}
+
+.gallery-slides {
+    display: flex; /* Alinea los elementos en una fila */
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten */
+    justify-content: center; /* Centra el contenido */
+    flex-direction: row; /* Por defecto, las imágenes están en fila */
+}
+
+.gallery-slide {
+    position: relative; /* Permite que los elementos secundarios se posicionen en relación con este */
+    margin: 10px; /* Espacio entre las imágenes */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transiciones suaves */
+}
+
+.gallery-slide img {
+    width: 300px; /* Ajusta el tamaño de las imágenes según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Efecto de hover en las imágenes */
+.gallery-slide:hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar el mouse */
+    opacity: 0.9; /* Cambia la opacidad al pasar el mouse */
+}
+
+.gallery-text {
+    position: absolute; /* Posiciona el texto encima de la imagen */
+    bottom: 10px; /* Espacio desde el fondo */
+    left: 10px; /* Espacio desde la izquierda */
+    color: white; /* Color del texto */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    padding: 5px; /* Espaciado interno */
+    border-radius: 4px; /* Bordes redondeados para el fondo */
+    transition: opacity 0.3s ease; /* Transición suave para la opacidad del texto */
+}
+
+.gallery-slide:hover .gallery-text {
+    opacity: 1; /* Mantiene la opacidad del texto al pasar el mouse */
+}
+
+.footer-section {
+    text-align: center; /* Centra el texto en el pie de página */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem; /* Tamaño más pequeño en pantallas pequeñas */
+    }
+
+    section h2 {
+        font-size: 1.5rem; /* Tamaño más pequeño en pantallas pequeñas */
+    }
+
+    section h3 {
+        font-size: 1.2rem; /* Tamaño más pequeño en pantallas pequeñas */
+    }
+
+    section p {
+        font-size: 1rem; /* Tamaño más pequeño en pantallas pequeñas */
+    }
+
+    .gallery-slides {
+        flex-direction: column; /* Cambia a vertical en pantallas más pequeñas */
+        align-items: center; /* Centra las imágenes */
+    }
+
+    .gallery-slide img {
+        width: 150px; /* Tamaño más pequeño para imágenes */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2rem; /* Tamaño aún más pequeño en pantallas muy pequeñas */
+    }
+
+    section h2 {
+        font-size: 1.2rem; /* Tamaño aún más pequeño en pantallas muy pequeñas */
+    }
+
+    section p {
+        font-size: 0.9rem; /* Tamaño aún más pequeño en pantallas muy pequeñas */
+    }
+
+    .gallery-slide img {
+        width: 100px; /* Tamaño más pequeño para imágenes */
+    }
+
+    button {
+        font-size: 0.8rem; /* Tamaño de fuente más pequeño para el botón */
+        padding: 8px 10px; /* Menos padding para el botón */
+    }
+}

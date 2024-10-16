@@ -52,6 +52,17 @@ body {
 }
 
 
+/* Asegurar que las letras no varíen su posición */
+body, h1, h2, h3, p {
+    font-size: 1rem; /* Tamaño de fuente fijo para evitar cambios */
+    font-family: var(--fuente-montserrat);
+    letter-spacing: 0.05em; /* Espaciado entre letras */
+}
+/* Opcional: Aplicar un ajuste para todas las etiquetas que contengan texto */
+* {
+    box-sizing: border-box; /* Asegura que el tamaño del padding y borde se incluyan en el tamaño total */
+}
+
 /* Estilos del menú */
 
 header.navbar {
@@ -499,7 +510,7 @@ header nav ul li a:hover {
 /* Botones con Efecto Neón */
 button {
  
-    background-color: var(--color-secundaria);
+    /*background-color: var(--color-secundaria);
     color: var(--color-texto);
     border: none;
     padding: var(--spacing-small) var(--spacing-medium);
@@ -508,14 +519,50 @@ button {
     text-transform: uppercase;
     cursor: pointer;
     border-radius: 20px; /* Ajusta este valor para modificar el redondeo */
-    box-shadow: 0 0 10px var(--color-hover), 0 0 20px var(--color-hover), 0 0 30px var(--color-hover);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    /*box-shadow: 0 0 10px var(--color-hover), 0 0 20px var(--color-hover), 0 0 30px var(--color-hover);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; */
+    width: 200px; /* Ancho fijo */
+    height: 50px; /* Alto fijo */
+    font-size: 1rem; /* Tamaño de fuente fijo */
+    font-family: var(--fuente-montserrat);
+    background-color: var(--color-primaria); /* Color de fondo */
+    color: var(--color-texto); /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center; /* Centrar el texto */
+    display: inline-block; /* Asegura que se comporten como bloques en línea */
+    
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+
 button:hover {
-    background-color: var(--color-hover);
-    box-shadow: 0 0 15px var(--color-hover), 0 0 25px var(--color-hover), 0 0 35px var(--color-hover);
+    /*background-color: var(--color-hover);
+    box-shadow: 0 0 15px var(--color-hover), 0 0 25px var(--color-hover), 0 0 35px var(--color-hover); */
+    background-color: var(--color-secundaria); /* Cambio de color al hacer hover */
+    transform: scale(1.05); /* Efecto de escala en hover */
 }
+/* Controlar el espaciado y evitar variaciones por el contenido */
+button p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    white-space: nowrap; /* Evitar que el texto haga un salto de línea */
+    overflow: hidden; /* Esconder texto desbordado si es necesario */
+    text-overflow: ellipsis; /* Añadir puntos suspensivos si el texto es muy largo */
+}
+/* Alineación de botones en un contenedor */
+.button-container {
+    display: flex; /* Utiliza flexbox para la alineación */
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 20px; /* Espacio entre los botones */
+    margin-top: var(--spacing-large); /* Espaciado superior */
+}
+
+
+
+
+
 
 /* Footer con íconos de redes sociales */
 footer {
