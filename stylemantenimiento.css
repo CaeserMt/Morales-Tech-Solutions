@@ -160,7 +160,7 @@ section p {
 
     .gallery-slides {
         
-        flex-direction: none; /* Cambia a vertical en pantallas más pequeñas */
+        flex-direction: auto; /* Cambia a vertical en pantallas más pequeñas */
         align-items: center; /* Centra las imágenes */
     }
 
@@ -171,9 +171,11 @@ section p {
         height: auto; /* Mantener proporciones */
         object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
 
+
         
         
     }
+    
     button {
         font-size: 0.8rem; /* Tamaño de fuente más pequeño para el botón */
         padding: 8px 10px; /* Menos padding para el botón */

@@ -75,7 +75,7 @@ header.navbar {
     left: 0; /* Asegura que ocupe todo el ancho */
     width: 100%; /* Tomar el 100% del ancho */
     z-index: 1000; /* Asegura que el menú esté en un nivel superior */
-    box-shadow: 10px 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 10px 2px 4px rgba(151, 72, 203, 0.5);
 }
 
 header.navbar nav {
