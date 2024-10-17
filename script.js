@@ -30,20 +30,70 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // script.js
 
+//let currentIndex = 0;
+//const slides = document.querySelectorAll('.slide');
+
+//function showNextSlide() {
+  //  slides[currentIndex].classList.remove('active');
+    //currentIndex = (currentIndex + 1) % slides.length;
+    //slides[currentIndex].classList.add('active');
+    //document.querySelector('.slides').style.transform = `translateX(-${currentIndex * 100}%)`;
+//}
+
+// Cambia de imagen cada 5 segundos
+//setInterval(showNextSlide, 7000);
+
+// Para controlar el deslizamiento manual
+//document.querySelector('.next-button').addEventListener('click', nextSlide);
+
+//Mantenimiento vizualizacion de imagenes
+
+
+
+ //banner 
 let currentIndex = 0;
 const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
+let autoSlideInterval;
 
+// Función para mostrar la siguiente diapositiva
 function showNextSlide() {
     slides[currentIndex].classList.remove('active');
-    currentIndex = (currentIndex + 1) % slides.length;
+    currentIndex = (currentIndex + 1) % totalSlides;
     slides[currentIndex].classList.add('active');
     document.querySelector('.slides').style.transform = `translateX(-${currentIndex * 100}%)`;
 }
 
-// Cambia de imagen cada 5 segundos
-setInterval(showNextSlide, 5000);
+// Función para mostrar la diapositiva anterior
+function showPrevSlide() {
+    slides[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    slides[currentIndex].classList.add('active');
+    document.querySelector('.slides').style.transform = `translateX(-${currentIndex * 100}%)`;
+}
 
-// Para controlar el deslizamiento manual
-document.querySelector('.next-button').addEventListener('click', nextSlide);
+// Cambia de imagen automáticamente cada 7 segundos
+function startAutoSlide() {
+    autoSlideInterval = setInterval(showNextSlide, 7000);
+}
 
-//Mantenimiento vizualizacion de imagenes
+// Detiene el auto-slide cuando se usa la navegación manual
+function stopAutoSlide() {
+    clearInterval(autoSlideInterval);
+}
+
+// Eventos para las flechas de navegación
+document.querySelector('.next-button').addEventListener('click', () => {
+    stopAutoSlide();  // Detiene el auto-slide
+    showNextSlide();  // Avanza manualmente
+    startAutoSlide(); // Reinicia el auto-slide después de la interacción
+});
+
+document.querySelector('.prev-button').addEventListener('click', () => {
+    stopAutoSlide();  // Detiene el auto-slide
+    showPrevSlide();  // Retrocede manualmente
+    startAutoSlide(); // Reinicia el auto-slide después de la interacción
+});
+
+// Inicia el auto-slide cuando se carga la página
+startAutoSlide();

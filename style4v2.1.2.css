@@ -17,6 +17,7 @@
     --spacing-small: 10px; /* Espaciado pequeño */
     --spacing-medium: 20px; /* Espaciado medio */
     --spacing-large: 40px; /* Espaciado grande */
+    
 }
 
 * {
@@ -398,7 +399,27 @@ header nav ul li a {
     padding: 10px;
     border-radius: 5px;
 }
+/*boton banner*/
+.prev-button, .next-button {
+    position: absolute;
+    top: 10%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+   /* padding: 10px; */
+   padding: 5px 8px; /* Reduce el padding */
+}
 
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
 /* Agregamos animación de opacidad para las imágenes */
 .slide {
     opacity: 0;
