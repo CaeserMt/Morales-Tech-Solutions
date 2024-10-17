@@ -4,8 +4,8 @@
 :root {
     --color-fondo: #ffffff
     ; /* Fondo oscuro #8a8ad7*/
-    --color-primaria: #ffffff; /* Azul profundo #97d0f1*/
-    --color-secundaria: #1B1B1B
+    --color-primaria: #e8e8e8; /* Azul profundo #97d0f1*/
+    --color-secundaria: #b5b5b5
     ; /* Rojo vibrante #9772d2*/
     --color-hover: #000000; /* Cian brillante */
     --color-texto: #000000; /* Texto claro */
@@ -165,7 +165,7 @@ header nav ul li a {
 }
 
 .vision-mision-didactica .card {
-    background-color: rgb(165, 165, 165);
+    background-color: rgb(220, 220, 220);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 300px;
@@ -209,7 +209,7 @@ header nav ul li a {
 }
 
 .vision-mision-didactica .card-content ul li strong {
-    color: var(--color-secundaria);
+    color: var(--color-primaria);
 }
 
 
@@ -584,7 +584,7 @@ header nav ul li a:hover {
     margin-right: auto; /* Asegura que el contenedor esté centrado */
     width: fit-content; /* Ajusta el ancho del contenedor al texto */
 }
-/* Botones con Efecto Neón */
+/* Botones con Efecto Neón CONTACTAR */
 button {
  
     /*background-color: var(--color-secundaria);
