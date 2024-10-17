@@ -286,6 +286,72 @@ header nav ul li a {
     }
 }
 
+@media (max-width: 390px) {
+    /* Ajustes para el cuerpo del documento */
+    body {
+        padding: var(--spacing-small);
+    }
+
+    /* Ajuste del menú de navegación */
+    header.navbar nav ul {
+        flex-direction: column; /* Cambiar a columna para pantallas pequeñas */
+        gap: var(--spacing-small); /* Reducir el espacio entre enlaces */
+        padding: var(--spacing-small); /* Asegurar suficiente espacio en móviles */
+    }
+
+    /* Ajuste del tamaño de la imagen del logo */
+    header.navbar img {
+        max-width: 40px; /* Ajustar el tamaño del logo para pantallas más pequeñas */
+    }
+
+    /* Ajustes de los servicios */
+    .service-block {
+        width: 100%; /* Un bloque por fila en pantallas pequeñas */
+        margin-bottom: var(--spacing-medium);
+    }
+
+    /* Ajuste de los textos del servicio */
+    .service-block h3 {
+        font-size: 1.2rem; /* Reducir el tamaño del título en móviles */
+    }
+
+    .service-block p {
+        font-size: 0.9rem; /* Reducir el tamaño del párrafo en móviles */
+    }
+
+    /* Ajustes del slider */
+    .banner-slider {
+        height: 300px; /* Reducir la altura del banner en móviles */
+    }
+
+    .slide img {
+        width: 100%; /* Asegurar que las imágenes ocupen el ancho completo en móviles */
+        height: 300px; /* Ajustar la altura de las imágenes */
+    }
+
+    .banner-text {
+        font-size: 0.8rem; /* Reducir el tamaño del texto del banner */
+        padding: 5px;
+    }
+
+    /* Ajustes para la sección de visión y misión */
+    .vision-mision-didactica .card {
+        width: 100%; /* Cada tarjeta ocupa el ancho completo */
+        margin-bottom: var(--spacing-medium);
+    }
+
+    /* Ajustes para los íconos sociales */
+    .social-icons {
+        flex-direction: column; /* Colocar los íconos en columna en pantallas pequeñas */
+        gap: var(--spacing-small); /* Reducir el espacio entre íconos */
+    }
+
+    .social-icon img {
+        width: 40px; /* Ajustar el tamaño de los íconos sociales en móviles */
+    }
+}
+
+
 
 /* Estilos para el banner */
 .banner-slider {
@@ -425,6 +491,8 @@ header nav ul li a:hover {
         display: flex;
     }
 }
+
+
 
 /* Flexbox para imágenes */
 .image-flex {
