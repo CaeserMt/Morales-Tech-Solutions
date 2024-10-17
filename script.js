@@ -43,9 +43,6 @@ function showNextSlide() {
 // Cambia de imagen cada 5 segundos
 setInterval(showNextSlide, 5000);
 
-
-
-// Cambia de imagen cada 5 segundos
-setInterval(showNextSlide, 5000);
-
+// Para controlar el deslizamiento manual
+document.querySelector('.next-button').addEventListener('click', nextSlide);
 
