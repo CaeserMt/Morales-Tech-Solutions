@@ -94,6 +94,7 @@ section p {
 }
 
 .gallery-slide {
+    
     flex: 1 1 calc(25% - 40px); /* Se ajusta a 25% del ancho del contenedor con margen */
 
     position: relative; /* Permite que los elementos secundarios se posicionen en relación con este */
@@ -104,8 +105,9 @@ section p {
 }
 
 .gallery-slide img {
+    
     width: 100%; /* Ajusta el tamaño de las imágenes según sea necesario */
-    height: 400px; /* Mantiene la proporción de la imagen */
+    height: 100px; /* Mantiene la proporción de la imagen */
     border-radius: 8px; /* Bordes redondeados */
 
     object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
@@ -157,15 +159,19 @@ section p {
     }
 
     .gallery-slides {
-        flex-direction: column; /* Cambia a vertical en pantallas más pequeñas */
+        
+        flex-direction: none; /* Cambia a vertical en pantallas más pequeñas */
         align-items: center; /* Centra las imágenes */
     }
 
     .gallery-slide img {
         
-        width: 100%; /* Ocupar todo el ancho disponible */
-        max-width: none; /* Elimina el límite de tamaño máximo */
+        width: 100%; /* Ocupar todo el ancho disponible AQUIII ES MODIFICAR */
+        max-width: 100%; /* Elimina el límite de tamaño máximo */
         height: auto; /* Mantener proporciones */
+        object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+
+        
         
     }
     button {

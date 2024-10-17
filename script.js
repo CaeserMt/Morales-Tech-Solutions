@@ -46,3 +46,4 @@ setInterval(showNextSlide, 5000);
 // Para controlar el deslizamiento manual
 document.querySelector('.next-button').addEventListener('click', nextSlide);
 
+//Mantenimiento vizualizacion de imagenes

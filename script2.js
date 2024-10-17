@@ -1,3 +1,16 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navUl = document.querySelector('header nav ul');
+
+    menuToggle.addEventListener('click', () => {
+        navUl.classList.toggle('active'); // Alterna la clase 'active' en la lista de navegación
+    });
+});
+
+
+
+
+
 let currentIndex = 0;
 const slides = document.querySelectorAll('.slide');
 
