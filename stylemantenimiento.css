@@ -48,7 +48,7 @@ header {
 
 h1 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 3em;
 }
 
 /* Agrega este nuevo contenedor para título y botón */
@@ -155,7 +155,13 @@ section p {
     }
 
     .gallery-slide img {
-        width: 150px; /* Tamaño más pequeño para imágenes */
+        width: 100%; /* Ocupar todo el ancho disponible */
+        max-width: none; /* Elimina el límite de tamaño máximo */
+        height: auto; /* Mantener proporciones */
+    }
+    button {
+        font-size: 0.8rem; /* Tamaño de fuente más pequeño para el botón */
+        padding: 8px 10px; /* Menos padding para el botón */
     }
 }
 
@@ -172,12 +178,107 @@ section p {
         font-size: 0.9rem; /* Tamaño aún más pequeño en pantallas muy pequeñas */
     }
 
-    .gallery-slide img {
-        width: 100px; /* Tamaño más pequeño para imágenes */
-    }
 
     button {
         font-size: 0.8rem; /* Tamaño de fuente más pequeño para el botón */
         padding: 8px 10px; /* Menos padding para el botón */
     }
+    
+.image-gallery {
+    display: flex; /* Alinear imágenes en una fila */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    margin: 20px 0; /* Espaciado superior e inferior para la galería */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en filas múltiples */
+}
+
+.gallery-slides {
+    display: flex; /* Alinea los elementos en una fila */
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten */
+    justify-content: center; /* Centra el contenido */
+    flex-direction: row; /* Por defecto, las imágenes están en fila */
+}
+
+.gallery-slide {
+    position: relative; /* Permite que los elementos secundarios se posicionen en relación con este */
+    margin: 10px; /* Espacio entre las imágenes */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transiciones suaves */
+}
+
+.gallery-slide img {
+    width: 300px; /* Ajusta el tamaño de las imágenes según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+
+}
+/* Estilos del Lightbox */
+.lightbox {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 999; /* Asegúrate de que aparezca sobre todo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9); /* Fondo oscuro */
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.content-container {
+    
+    border: 1px solid #ccc; /* Borde del contenedor */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 30px; /* Espaciado interno */
+    margin: 40px auto; /* Espaciado superior e inferior y centrado */
+    max-width: 800px; /* Ancho máximo del contenedor */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
 }
