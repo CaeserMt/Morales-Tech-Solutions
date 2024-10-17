@@ -75,16 +75,18 @@ header.navbar {
     left: 0; /* Asegura que ocupe todo el ancho */
     width: 100%; /* Tomar el 100% del ancho */
     z-index: 1000; /* Asegura que el menú esté en un nivel superior */
-    box-shadow: 10px 2px 4px rgba(255, 255, 255, 0.5);
+    box-shadow: 10px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 header.navbar nav {
+    
     display: flex; /* Asegúrate de que el menú sea un flex container */
     justify-content: center; /* Centra los elementos del menú */
     width: 100%; /* Tomar el 100% del ancho */
 }
 
 header.navbar img {
+    
     max-width: 50px; /* Reducir el tamaño de la imagen */
     border-radius: 50%; /* Aplica la imagen en formato circular */
     object-fit: cover; /* Ajusta la imagen al contenedor sin distorsionarla */
@@ -92,20 +94,22 @@ header.navbar img {
 }
 
 header nav ul {
+    
     list-style: none;
     display: flex;
     gap: var(--spacing-medium);
-    background-color: rgba(182, 158, 228, 0.9);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    /*background-color: rgba(144, 94, 94, 0.9); */
+    /*border-radius: 10px; */
+   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); */
     padding: var(--spacing-small);
     margin: 0; /* Remover el margen para evitar desalineaciones */
     
 }
 
 header nav ul li a {
+    
     color: var(--color-texto);
-    font-family: var(--fuente-krona);
+    font-family: var(--fuente-krona); 
     font-size: 1rem; /* Reducir el tamaño de la fuente */
     text-transform: uppercase;
     text-decoration: none;
@@ -113,6 +117,7 @@ header nav ul li a {
     padding: var(--spacing-small); /* Espaciado alrededor del texto */
     border-radius: 5px; /* Bordes redondeados */
 }
+
 
 /*link logos*/
 .social-icons {
@@ -663,3 +668,4 @@ footer .social-media a:hover {
     color: var(--color-hover);
     box-shadow: 0 0 10px var(--color-hover), 0 0 15px var(--color-hover);
 }
+
