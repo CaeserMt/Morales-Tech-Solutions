@@ -385,8 +385,9 @@ header nav ul li a {
 }
 
 .slide img {
-    width: 35%;
-    height: 400px; /* Ajusta la altura de las imágenes */
+    width: 50%;
+    height: auto; /* Ajusta la altura de las imágenes */
+    max-height: 400px; /* Limita la altura máxima */
     object-fit: cover;
 }
 
@@ -398,6 +399,8 @@ header nav ul li a {
     color: white;
     padding: 10px;
     border-radius: 5px;
+    max-width: 90%; /* Asegúrate de que el texto no se salga de la pantalla */
+    box-sizing: border-box; /* Incluye padding en el tamaño total */
 }
 /*boton banner*/
 .prev-button, .next-button {
@@ -407,18 +410,23 @@ header nav ul li a {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    font-size: 1rem;
+    font-size: 0.8rem;
     cursor: pointer;
    /* padding: 10px; */
-   padding: 5px 8px; /* Reduce el padding */
+   /*padding: 5px 8px; /* Reduce el padding */
+
+   padding: 5px; /* Padding igual para que sea cuadrado */
+    width: 40px; /* Ancho fijo para que sean cuadrados */
+    height: 40px; /* Altura fija para que sean cuadrados */
+    border-radius: 50%; /* Bordes redondeados para un efecto circular */
 }
 
 .prev-button {
-    left: 10px;
+    left: 5%;
 }
 
 .next-button {
-    right: 10px;
+    right: 5%;
 }
 /* Agregamos animación de opacidad para las imágenes */
 .slide {
@@ -435,33 +443,58 @@ header nav ul li a {
 
 .banner-text h2 {
     margin: 0;
-    font-size: 24px;
+    font-size: 2vw; /* vw para que sea responsivo */
 }
 
 .banner-text p {
     margin: 5px 0 0;
+    font-size: 1.5vw; /* Cambia a vw para que sea responsivo */
 }
 
-/* Puedes ajustar este media query si necesitas que el banner se vea mejor en pantallas móviles */
+/* Media Queries para ajustes adicionales */
 @media (max-width: 768px) {
-    .banner-slider {
-        height: 250px;
-    }
-
-    .slide img {
-        height: 250px;
-    }
-
     .banner-text h2 {
-        font-size: 18px;
+        font-size: 4vw; /* Ajustar tamaño del texto para pantallas más pequeñas */
+    }
+    
+    .banner-text p {
+        font-size: 3vw; /* Ajustar tamaño del texto para pantallas más pequeñas */
     }
 
-    .banner-text p {
-        font-size: 15px;
+    .prev-button, .next-button {
+        font-size: 0.8rem; /* Ajustar tamaño del texto de los botones */
+        padding: 4px 8px; /* Ajustar el padding de los botones */
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-text {
+        padding: 5px; /* Reducir padding para dispositivos muy pequeños */
+    }
+    
+    .prev-button, .next-button {
+        font-size: 0.7rem; /* Ajustar tamaño del texto de los botones */
+        padding: 3px 6px; /* Ajustar el padding de los botones */
     }
 }
 
 
+@media (max-width: 480px) {
+    .banner-text {
+        padding: 5px; /* Reducir padding para dispositivos muy pequeños */
+    }
+    
+    .prev-button, .next-button {
+        font-size: 0.8rem; /* Ajustar tamaño del texto de los botones */
+        padding: 3px 6; /* Ajustar el padding de los botones */
+        top: 10%; /* Ajustar posición vertical para que no choquen */
+    }
+
+    /* Reducir la altura del banner en pantallas muy pequeñas */
+    .banner-slider {
+        height: 30vh; /* Disminuir altura del banner */
+    }
+}
 
 
 
