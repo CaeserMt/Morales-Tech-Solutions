@@ -27,6 +27,62 @@ main {
     text-align: justify; /* Justifica el texto en el contenido principal */
 }
 
+/*imagenes de la derecha y izquierda*/
+
+.main-content {
+    display: flex; /* Usar flexbox para el diseño */
+    align-items: stretch; /* Alinear elementos para que se estiren verticalmente */
+    justify-content: space-between; /* Espacio entre los elementos */
+    width: 100%; /* Asegurarse que ocupe el 100% del ancho */
+}
+
+.content-container {
+    flex: 1; /* Permitir que el contenedor de contenido crezca */
+    padding: 20px; /* Espaciado interno para el contenido */
+    max-width: 600px; /* Ancho máximo del contenido */
+}
+
+.side-image {
+    flex: 1; /* Las imágenes ocupan el espacio restante */
+    display: flex;
+    justify-content: center; /* Centrar imagen horizontalmente */
+    align-items: cover; /* Centrar imagen verticalmente */
+}
+
+.side-image img {
+    width: 100%; /* Asegurar que la imagen ocupe todo el contenedor */
+    height: auto; /* Mantener proporción de la imagen */
+    max-height: 100%; /* Limitar altura a no exceder su contenedor */
+    border-radius: 15px; /* Esquinas redondeadas */
+    transition: transform 0.3s; /* Animación para efecto de hover */
+}
+
+/* Efecto hover para hacer las imágenes más dinámicas */
+.side-image img:hover {
+    transform: scale(1.05); /* Escalar la imagen al pasar el mouse */
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    }
+
+    .content-container {
+        max-width: 100%; /* Permitir que el contenido ocupe todo el ancho */
+    }
+
+    .side-image {
+        margin: 10px 0; /* Margen para separar las imágenes del contenido */
+    }
+}
+
+
+
+
+
+
+
 /* Footer siempre al fondo */
 footer {
     position: fixed;
