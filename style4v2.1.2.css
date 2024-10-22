@@ -197,6 +197,7 @@ header nav ul li a {
     font-size: 1rem;
     text-align: justify;
     line-height: 1.6;
+
 }
 
 .vision-mision-didactica .card-content ul {
@@ -210,7 +211,7 @@ header nav ul li a {
 }
 
 .vision-mision-didactica .card-content ul li strong {
-    color: var(--color-primaria);
+    color: var(--color-hover);
 }
 
 
