@@ -50,9 +50,9 @@ main {
 }
 
 .side-image img {
-    width: 100%; /* Asegurar que la imagen ocupe todo el contenedor */
+    width: 85%; /* Asegurar que la imagen ocupe todo el contenedor */
     height: auto; /* Mantener proporción de la imagen */
-    max-height: 100%; /* Limitar altura a no exceder su contenedor */
+    max-height: 90%; /* Limitar altura a no exceder su contenedor */
     border-radius: 15px; /* Esquinas redondeadas */
     transition: transform 0.3s; /* Animación para efecto de hover */
 }
