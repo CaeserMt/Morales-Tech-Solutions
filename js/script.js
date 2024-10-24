@@ -3,10 +3,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
     const navUl = document.querySelector('header nav ul');
 
-    menuToggle.addEventListener('click', () => {
-        navUl.classList.toggle('active'); // Alterna la clase 'active' en la lista de navegación
-    });
+    if (menuToggle && navUl) {
+        menuToggle.addEventListener('click', () => {
+            navUl.classList.toggle('active'); // Alterna la clase 'active' en la lista de navegación
+        });
+    } else {
+        console.error("El menú no se encontró en el DOM.");
+    }
 });
+
+
+//document.addEventListener('DOMContentLoaded', () => {
+  //  const menuToggle = document.querySelector('.menu-toggle');
+    //const navUl = document.querySelector('header nav ul');
+
+    //menuToggle.addEventListener('click', () => {
+      //  navUl.classList.toggle('active'); // Alterna la clase 'active' en la lista de navegación
+    //});
+//});
 
 
 
@@ -97,3 +111,23 @@ document.querySelector('.prev-button').addEventListener('click', () => {
 
 // Inicia el auto-slide cuando se carga la página
 startAutoSlide();
+
+
+fetch('menu.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('menu').innerHTML = data;
+    
+                // Código para manejar el menú después de que se haya cargado
+                const menuToggle = document.querySelector('.menu-toggle');
+                const navUl = document.querySelector('header nav ul');
+    
+                if (menuToggle && navUl) {
+                    menuToggle.addEventListener('click', () => {
+                        navUl.classList.toggle('active'); // Alterna la clase 'active' en la lista de navegación
+                    });
+                } else {
+                    console.error("El menú no se encontró en el DOM.");
+                }
+            })
+            .catch(error => console.error('Error al cargar el menú:', error));
