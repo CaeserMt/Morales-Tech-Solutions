@@ -131,3 +131,34 @@ fetch('menu.html')
                 }
             })
             .catch(error => console.error('Error al cargar el menú:', error));
+
+
+
+            window.onload = function() {
+                const typedTextElement = document.getElementById("typed-text");
+                const typedText = "Bienvenido a Morales Tech Solutions"; // El texto que se escribirá
+                let i = 0;
+                const speed = 100; // Velocidad de escritura en milisegundos
+            
+                function typeWriter() {
+                    if (i < typedText.length) {
+                        typedTextElement.innerHTML += typedText.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, speed);
+                    } else {
+                        typedTextElement.classList.add("animated-text"); // Añadir la clase cuando el texto termine
+                    }
+                }
+            
+                // Iniciar el efecto de escritura
+                if (typedTextElement) {
+                    typeWriter();
+                } else {
+                    console.error("El elemento con ID 'typed-text' no fue encontrado.");
+                }
+            };
+
+
+           
+            
+
