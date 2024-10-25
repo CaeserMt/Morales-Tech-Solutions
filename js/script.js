@@ -160,5 +160,59 @@ fetch('menu.html')
 
 
            
-            
+//chat bot 
+
+
+function toggleChat() {
+    const chatbox = document.getElementById('chatbox');
+    const messages = document.getElementById('messages');
+    
+    // Cambiar la visibilidad del chat
+    chatbox.style.display = chatbox.style.display === 'none' ? 'block' : 'none';
+
+    // Si se está abriendo el chat, enviar el mensaje de bienvenida
+    if (chatbox.style.display === 'block') {
+        const currentHour = new Date().getHours();
+        const greeting = (currentHour < 6 || currentHour >= 18) ? "¡Buenas noches!" : "¡Buenos días!";
+        
+        displayMessage(greeting);
+        displayMessage("Hola, me llamo Caeser. ¿En qué puedo ayudarte?");
+    }
+}
+
+
+function sendMessage() {
+    const userInput = document.getElementById('userInput');
+    const message = userInput.value.trim();
+    if (message) {
+        displayMessage('Usuario: ' + message);
+        userInput.value = '';
+
+        // Respuesta programada
+        const botResponse = getBotResponse(message);
+        setTimeout(() => {
+            displayMessage('Bot: ' + botResponse);
+        }, 500);
+    }
+}
+
+function displayMessage(message) {
+    const messages = document.getElementById('messages');
+    const messageDiv = document.createElement('div');
+    messageDiv.textContent = message;
+    messages.appendChild(messageDiv);
+    messages.scrollTop = messages.scrollHeight; // Desplazar hacia abajo
+}
+
+function getBotResponse(message) {
+    const responses = {
+        "hola": "¡Hola! ¿En qué puedo ayudarte?",
+        "servicios": "Ofrecemos mantenimiento, reparación y optimización de equipos.",
+        "contacto": "Puedes contactarnos a través de nuestro formulario o en nuestras redes sociales.",
+        "gracias": "¡De nada! Si tienes más preguntas, no dudes en preguntar.",
+        "default": "Lo siento, no entiendo esa pregunta. ¿Puedes reformularla?"
+    };
+    return responses[message.toLowerCase()] || responses["default"];
+}
+
 

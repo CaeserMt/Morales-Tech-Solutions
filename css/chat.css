@@ -1,0 +1,107 @@
+/* Estilos generales del chatbot */
+.chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Estilo de la caja del chat */
+.chatbox {
+    border: none;
+    border-radius: 10px;
+    width: 350px;
+    background: linear-gradient(135deg, #5c5d9d, #a58dea);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.chatbox:hover {
+    transform: scale(1.05);
+}
+
+/* Encabezado de la caja de chat */
+.chatbox-header {
+    background-color: #27345a;
+    color: white;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo para los mensajes */
+.chatbox-messages {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 15px;
+    border-radius: 0 0 10px 10px;
+    background-color: #a58dea;
+}
+
+/* Estilo para los mensajes del usuario y del bot */
+.chatbox-messages div {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 15px;
+    position: relative;
+    max-width: 80%;
+}
+
+.chatbox-messages div:nth-child(odd) {
+    background-color: #275a46;
+    align-self: flex-start;
+    margin-right: auto;
+}
+
+.chatbox-messages div:nth-child(even) {
+    background-color: #27345a;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+/* Estilo para la entrada de texto */
+.chatbox input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-top: 1px solid #ccc;
+    border-radius: 0 0 10px 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.chatbox input:focus {
+    outline: none;
+    background-color: #f8f9fa;
+}
+
+/* Estilo del botón de cierre */
+.chatbox-header button {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    transition: transform 0.2s;
+}
+
+.chatbox-header button:hover {
+    transform: scale(1.2);
+}
+
+/* Ajuste en la posición de la caja de entrada */
+.chatbox-messages {
+    display: flex;
+    flex-direction: column;
+}
+
+.chatbot-image {
+    width: 100px; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 50%; /* Hace la imagen circular (opcional) */
+    margin: 9px auto; /* Añade un margen superior e inferior */
+    display: block; /* Centra la imagen horizontalmente */
+}

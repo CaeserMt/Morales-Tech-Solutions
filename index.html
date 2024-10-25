@@ -6,6 +6,7 @@
     <title>Morales Tech Solutions</title>
     <link rel="icon" type="image/x-icon" href="img/logocirculo.png">
     <link rel="stylesheet" href="css/style4v2.1.2.css">
+    <link rel="stylesheet" href="css/chat.css">
 </head>
 
 <body>
@@ -185,6 +186,23 @@
         <p>&copy; 2024 Morales Tech Solutions - Todos los derechos reservados</p>
     </footer>
 
+    <div id="chatbot" class="chatbot">
+
+        <button onclick="toggleChat()">Chatbot 💬</button>
+
+        <div id="chatbox" class="chatbox" style="display:none;">
+           
+            <img src="img/chatbot/rb_4107.png" alt="Asistente" class="chatbot-image"> <!-- Aquí se añade la imagen -->  
+            <div class="chatbox-header">
+                <h4>Chat de Ayuda</h4>
+                <button onclick="toggleChat()"> Salir ✖️</button>
+            </div>
+            <div class="chatbox-messages" id="messages"></div>
+            <div class="input-container">
+                <input type="text" id="userInput" placeholder="Escribe tu mensaje..." onkeypress="if(event.key === 'Enter'){ sendMessage(); }">
+                <button id="sendButton" onclick="sendMessage()">Enviar</button>
+            </div>
+    </div>
     <script src="js/script.js"></script>
 </body>
 </html>
