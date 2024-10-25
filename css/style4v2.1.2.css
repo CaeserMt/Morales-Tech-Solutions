@@ -2,13 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
 
 :root {
-    --color-fondo: #ffffff
+    --color-fondo: #4d588b
     ; /* Fondo oscuro #8a8ad7*/
-    --color-primaria: #e8e8e8; /* Azul profundo #97d0f1*/
-    --color-secundaria: #b5b5b5
+    --color-primaria: #1a1e37; /* Azul profundo #97d0f1*/
+    --color-secundaria: #120907
     ; /* Rojo vibrante #9772d2*/
-    --color-hover: #000000; /* Cian brillante */
-    --color-texto: #000000; /* Texto claro */
+    --color-hover: #ffffff; /* Cian brillante */
+    --color-texto: #dedede; /* Texto claro */
     --color-shadow: rgba(0, 255, 212, 0.3); /* Sombra suave */
 
     --fuente-krona: 'Krona One', sans-serif; /* Fuente para encabezados */
@@ -166,7 +166,7 @@ header nav ul li a {
 }
 
 .vision-mision-didactica .card {
-    background-color: rgb(220, 220, 220);
+    background-color:#6777b0;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 300px;
