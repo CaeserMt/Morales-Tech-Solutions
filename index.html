@@ -187,22 +187,22 @@
     </footer>
 
     <div id="chatbot" class="chatbot">
-
         <button onclick="toggleChat()">Chatbot 💬</button>
-
+    
         <div id="chatbox" class="chatbox" style="display:none;">
-           
-            <img src="img/chatbot/rb_4107.png" alt="Asistente" class="chatbot-image"> <!-- Aquí se añade la imagen -->  
+            <img src="img/chatbot/rb_4107.png" alt="Asistente" class="chatbot-image">
             <div class="chatbox-header">
                 <h4>Chat de Ayuda</h4>
-                <button onclick="toggleChat()"> Salir ✖️</button>
+                <button onclick="toggleChat()">Salir ✖️</button>
             </div>
             <div class="chatbox-messages" id="messages"></div>
             <div class="input-container">
                 <input type="text" id="userInput" placeholder="Escribe tu mensaje..." onkeypress="if(event.key === 'Enter'){ sendMessage(); }">
                 <button id="sendButton" onclick="sendMessage()">Enviar</button>
             </div>
+        </div>
     </div>
+    
     <script src="js/script.js"></script>
 </body>
 </html>

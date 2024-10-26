@@ -105,3 +105,24 @@
     margin: 9px auto; /* Añade un margen superior e inferior */
     display: block; /* Centra la imagen horizontalmente */
 }
+
+.social-buttons {
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+    flex-direction: column; /* Alineación en columna */
+
+}
+
+.social-button {
+    display: inline-block;
+    padding: 10px 15px; /* Espaciado interior */
+    background-color: #4584c8; /* Color de fondo */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Efecto de transición */
+}
+
+.social-button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}
