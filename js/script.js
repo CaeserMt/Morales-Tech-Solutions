@@ -136,7 +136,7 @@ fetch('menu.html')
 
             window.onload = function() {
                 const typedTextElement = document.getElementById("typed-text");
-                const typedText = "Bienvenido a Morales Tech Solutions"; // El texto que se escribirá
+                const typedText = "Bienvenido a Morales Tech Solutions Advanced"; // El texto que se escribirá
                 let i = 0;
                 const speed = 100; // Velocidad de escritura en milisegundos
             
