@@ -65,6 +65,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
  //banner 
+
+
+ 
 let currentIndex = 0;
 const slides = document.querySelectorAll('.slide');
 const totalSlides = slides.length;
@@ -88,7 +91,7 @@ function showPrevSlide() {
 
 // Cambia de imagen automáticamente cada 7 segundos
 function startAutoSlide() {
-    autoSlideInterval = setInterval(showNextSlide, 7000);
+    autoSlideInterval = setInterval(showNextSlide, 3000);
 }
 
 // Detiene el auto-slide cuando se usa la navegación manual
