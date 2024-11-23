@@ -70,7 +70,7 @@ body, h1, h2, h3, p {
 
 header.navbar {
     padding: var(--spacing-small) 3%; /* Espaciado en el navbar */
-    background: linear-gradient(90deg, var(--color-primaria), var(--color-secundaria));
+    background: linear-gradient(90deg, var(--color-texto), var(--color-hover));
     display: flex;
     align-items: center; /* Alinear en el centro */
     /*position: fixed; /* Mantiene el menú en la parte superior */
@@ -90,9 +90,8 @@ header.navbar nav {
 
 header.navbar img {
     
-    max-width: 50px; /* Reducir el tamaño de la imagen */
-    border-radius: 50%; /* Aplica la imagen en formato circular */
-    object-fit: cover; /* Ajusta la imagen al contenedor sin distorsionarla */
+    max-width: 170px; /* Reducir el tamaño de la imagen */
+    object-fit: contain; /* Ajusta la imagen al contenedor sin distorsionarla */
     margin-right: var(--spacing-medium); /* Espaciado a la derecha de la imagen */
 }
 
@@ -111,7 +110,7 @@ header nav ul {
 
 header nav ul li a {
     
-    color: var(--color-texto);
+    color: var(--color-primaria);
     font-family: var(--fuente-krona); 
     font-size: 1rem; /* Reducir el tamaño de la fuente */
     text-transform: uppercase;
