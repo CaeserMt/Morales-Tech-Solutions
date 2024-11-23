@@ -70,7 +70,7 @@ body, h1, h2, h3, p {
 
 header.navbar {
     padding: var(--spacing-small) 3%; /* Espaciado en el navbar */
-    background: linear-gradient(90deg, var(--color-texto), var(--color-hover));
+    background: linear-gradient(90deg, var(--color-texto), var(--color-texto));
     display: flex;
     align-items: center; /* Alinear en el centro */
     /*position: fixed; /* Mantiene el menú en la parte superior */
@@ -79,6 +79,11 @@ header.navbar {
     width: 100%; /* Tomar el 100% del ancho */
     z-index: 1000; /* Asegura que el menú esté en un nivel superior */
     box-shadow: 10px 2px 4px rgba(57, 57, 57, 0.5);
+}
+/* Cambiar el color del texto a azul oscuro */
+header.navbar a,
+header.navbar p {
+    color: #003366; /* Azul oscuro */
 }
 
 header.navbar nav {
@@ -110,7 +115,7 @@ header nav ul {
 
 header nav ul li a {
     
-    color: var(--color-primaria);
+    color: var(--color-texto);
     font-family: var(--fuente-krona); 
     font-size: 1rem; /* Reducir el tamaño de la fuente */
     text-transform: uppercase;
@@ -306,6 +311,7 @@ header nav ul li a {
     /* Ajuste del menú de navegación */
     header.navbar nav ul {
         flex-direction: column; /* Cambiar a columna para pantallas pequeñas */
+        
         gap: var(--spacing-small); /* Reducir el espacio entre enlaces */
         padding: var(--spacing-small); /* Asegurar suficiente espacio en móviles */
     }
@@ -539,7 +545,7 @@ header nav ul li a:hover {
         position: absolute;
         top: 70px;
         left: 0;
-        background-color: var(--color-primaria);
+        background-color: var(--color-hover); /* fondo menu desplegado */
         z-index: 1;
     }
 
