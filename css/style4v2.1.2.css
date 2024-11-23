@@ -70,7 +70,7 @@ body, h1, h2, h3, p {
 
 header.navbar {
     padding: var(--spacing-small) 3%; /* Espaciado en el navbar */
-    background: linear-gradient(90deg, var(--color-texto), var(--color-hover));
+    background: linear-gradient(90deg, var(--color-hover), var(--color-hover));
     display: flex;
     align-items: center; /* Alinear en el centro */
     /*position: fixed; /* Mantiene el menú en la parte superior */
@@ -515,13 +515,13 @@ header nav ul li a {
 header nav ul li a:hover {
     color: var(--color-hover);
     transform: scale(1.05); /* Efecto de escalado al pasar el mouse */
-    background-color: rgba(255, 255, 255, 0.1); /* Fondo ligero al pasar el mouse */
+    background-color: rgba(0, 0, 0, 0.1); /* Fondo ligero al pasar el mouse */
 }
 
 /* Efecto Neón en el menú móvil */
 .menu-toggle {
     display: none;
-    color: var(--color-texto);
+    color: var(--color-primaria);
     font-size: 2rem;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -543,7 +543,7 @@ header nav ul li a:hover {
         flex-direction: column;
         width: 100%;
         position: absolute;
-        top: 70px;
+        top: 75px;
         left: 0;
         background-color: var(--color-hover); /* fondo menu desplegado */
         z-index: 1;
@@ -552,7 +552,7 @@ header nav ul li a:hover {
     header.navbar nav ul li {
         text-align: center;
         padding: var(--spacing-small);
-        border-bottom: 1px solid var(--color-secundaria);
+        border-bottom: 1.5px solid var(--color-fondo);
     }
 
     header.navbar .menu-toggle {
