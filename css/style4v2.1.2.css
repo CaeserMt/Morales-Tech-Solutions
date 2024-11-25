@@ -2,13 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
 
 :root {
-    --color-fondo: #4d588b
+    --color-fondo: #ffffff
     ; /* Fondo oscuro #8a8ad7*/
     --color-primaria: #1a1e37; /* Azul profundo #97d0f1*/
-    --color-secundaria: #120907
+    --color-secundaria: #120907;
+    --color-S: #7a7a7a;
+    --color-A: #b9b9b9
     ; /* Rojo vibrante #9772d2*/
     --color-hover: #ffffff; /* Cian brillante */
-    --color-texto: #dedede; /* Texto claro */
+    --color-texto: #000000; /* Texto claro */
     --color-shadow: rgba(0, 255, 212, 0.3); /* Sombra suave */
 
     --fuente-krona: 'Krona One', sans-serif; /* Fuente para encabezados */
@@ -170,7 +172,7 @@ header nav ul li a {
 }
 
 .vision-mision-didactica .card {
-    background-color:#6777b0;
+    background-color:#d7d7d7;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 300px;
@@ -193,7 +195,7 @@ header nav ul li a {
     font-family: var(--fuente-krona);
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: var(--color-hover);
+    color: var(--color-primaria);
 }
 
 .vision-mision-didactica .card-content p, .vision-mision-didactica .card-content ul {
@@ -216,7 +218,7 @@ header nav ul li a {
 }
 
 .vision-mision-didactica .card-content ul li strong {
-    color: var(--color-hover);
+    color: var(--color-primaria);
 }
 
 
@@ -260,7 +262,7 @@ header nav ul li a {
 .service-block h3 {
     /* margin: 10px 0;               /* Margen para el título */
      /* font-size: 1.2rem;            /* Tamaño del texto del título */
-     color: var(--color-texto);
+     color: var(--color-primaria);
      font-size: 1.4rem;
     margin: 0.5rem 0; /* Añadir márgenes uniformes arriba y abajo */
     font-weight: bold; /* Resaltar el título */
@@ -426,7 +428,7 @@ header nav ul li a {
 /*boton banner*/
 .prev-button, .next-button {
     position: absolute;
-    top: 10%;
+    top: 40%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
@@ -464,12 +466,12 @@ header nav ul li a {
 
 .banner-text h2 {
     margin: 0;
-    font-size: 2vw; /* vw para que sea responsivo */
+    font-size: 1.2vw; /* vw para que sea responsivo */
 }
 
 .banner-text p {
     margin: 5px 0 0;
-    font-size: 1.5vw; /* Cambia a vw para que sea responsivo */
+    font-size: 0.85vw; /* Cambia a vw para que sea responsivo */
 }
 
 /* Media Queries para ajustes adicionales */
@@ -601,13 +603,13 @@ header nav ul li a:hover {
     box-shadow: 0 8px 16px var(--color-shadow);
 }
 
-/* Estilos de Sección */
+/* Estilos de Sección TITULOS*/
 .about-us h1, .services h2, .gallery h2, .contact h2 {
-    font-family: var(--fuente-krona);
-    font-size: 2rem;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.40rem;
     text-align: center;
     margin-bottom: var(--spacing-medium);
-    color: var(--color-hover);
+    color: var(--color-primaria);
     text-transform: uppercase;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra de texto */
 }
@@ -677,7 +679,7 @@ button {
     height: 50px; /* Alto fijo */
     font-size: 1rem; /* Tamaño de fuente fijo */
     font-family: var(--fuente-montserrat);
-    background-color: var(--color-primaria); /* Color de fondo */
+    background-color: var(--color-A); /* Color de fondo */
     color: var(--color-texto); /* Color del texto */
     border: none; /* Sin borde */
     border-radius: 5px; /* Bordes redondeados */
@@ -691,7 +693,7 @@ button {
 button:hover {
     /*background-color: var(--color-hover);
     box-shadow: 0 0 15px var(--color-hover), 0 0 25px var(--color-hover), 0 0 35px var(--color-hover); */
-    background-color: var(--color-secundaria); /* Cambio de color al hacer hover */
+    background-color: var(--color-S); /* Cambio de color al hacer hover */
     transform: scale(1.05); /* Efecto de escala en hover */
 }
 /* Controlar el espaciado y evitar variaciones por el contenido */
