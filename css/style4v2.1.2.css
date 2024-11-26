@@ -510,7 +510,7 @@ header nav ul li a {
     .prev-button, .next-button {
         font-size: 0.8rem; /* Ajustar tamaño del texto de los botones */
         padding: 3px 6; /* Ajustar el padding de los botones */
-        top: 10%; /* Ajustar posición vertical para que no choquen */
+        top: 40%; /* Ajustar posición vertical para que no choquen */
     }
 
     /* Reducir la altura del banner en pantallas muy pequeñas */
