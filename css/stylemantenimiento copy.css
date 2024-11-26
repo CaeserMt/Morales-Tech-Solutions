@@ -124,13 +124,13 @@ section h2 {
 }
 
 section h3 {
-    font-size: 1.8rem; /* Título de servicios */
+    font-size: 1.5rem; /* Título de servicios */
     margin: 15px 0; /* Espacio alrededor */
-    text-align: center; /* Justifica el texto del título */
+    text-align: justify; /* Justifica el texto del título */
 }
 
 section p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.6;
     margin: 10px 0;
     text-align: justify; /* Justifica el texto del párrafo */
@@ -412,43 +412,3 @@ section p {
     transition: opacity 2s ease-in-out;
 }
 
-.service-list {
-    display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten en filas */
-    gap: 20px; /* Espaciado entre servicios */
-    justify-content: center; /* Centra los servicios en el contenedor */
-    margin-top: 20px;
-}
-
-.service-item {
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    text-align: center;
-    width: 250px; /* Ancho fijo para uniformidad */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-item:hover {
-    transform: translateY(-5px); /* Efecto de elevación */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-
-.service-item img {
-    width: 60px; /* Tamaño uniforme de iconos */
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.service-item h4 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.service-item p {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #666;
-}
