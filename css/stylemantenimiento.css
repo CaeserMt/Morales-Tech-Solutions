@@ -127,7 +127,7 @@ footer {
 /* Estilo del encabezado */
 header {
     background: linear-gradient(90deg, #cbcbcb, #727272); /* Colores más suaves y modernos para el degradado */
-    padding: 40px 20px; /* Aumentar el padding para más espacio */
+    padding: 25px 20px; /* Aumentar el padding para más espacio */
     text-align: center; /* Centrar el texto */
     position: relative; /* Permitir posicionar elementos dentro del flujo */
     border-radius: 10px; /* Bordes redondeados para un acabado más suave */
