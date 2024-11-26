@@ -124,19 +124,46 @@ footer {
 }
 
 /* Header */
+/* Estilo del encabezado */
 header {
-    background: linear-gradient(90deg, var(--color-A), var(--color-S));
-    padding: 25px;
-    text-align: center;
-    position: relative; /* Cambiar a relative para poder posicionar el botón en el flujo */
+    background: linear-gradient(90deg, #cbcbcb, #727272); /* Colores más suaves y modernos para el degradado */
+    padding: 40px 20px; /* Aumentar el padding para más espacio */
+    text-align: center; /* Centrar el texto */
+    position: relative; /* Permitir posicionar elementos dentro del flujo */
+    border-radius: 10px; /* Bordes redondeados para un acabado más suave */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Agregar sombra sutil para profundidad */
 }
 
+/* Estilo para el título */
 h1 {
-    color: white;
+    color: #ffffff; /* Blanco brillante para contraste */
     margin: 0;
-    font-size: 1em;
-
+    font-size: 3rem; /* Tamaño adecuado para visibilidad */
+    font-family: 'Poppins', sans-serif; /* Fuente moderna y profesional */
+    font-weight: 700; /* Negrita para mayor impacto */
+    text-transform: uppercase; /* Mayúsculas para estilo consistente */
+    letter-spacing: 2px; /* Espaciado entre letras para mejor legibilidad */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra sutil para mayor contraste y legibilidad */
 }
+
+/* Efecto de botón (si decides agregar un botón) */
+header .cta-button {
+    margin-top: 20px; /* Separar el botón del título */
+    padding: 15px 30px; /* Asegurar que el botón sea cómodo de ver */
+    font-size: 1.2rem; /* Tamaño de texto apropiado */
+    color: white; /* Texto blanco */
+    background-color: #1E88E5; /* Color destacado para el botón */
+    border: none;
+    border-radius: 5px; /* Bordes redondeados para suavizar el diseño */
+    cursor: pointer; /* Hacer el botón interactivo */
+    transition: background-color 0.3s ease; /* Transición suave al pasar el cursor */
+}
+
+/* Efecto hover para el botón */
+header .cta-button:hover {
+    background-color: #4CAF50; /* Cambiar el color de fondo al pasar el ratón */
+}
+
 
 /* Agrega este nuevo contenedor para título y botón */
 .title-button-container {
@@ -153,7 +180,7 @@ section h2 {
 }
 
 section h3 {
-    font-size: 3rem; /* Tamaño grande para destacar */
+    font-size: 1.5rem; /* Tamaño grande para destacar */
     margin: 20px 0; /* Espaciado superior e inferior */
     text-align: center; /* Centrar el texto */
     color: #333; /* Color elegante y legible */
@@ -165,6 +192,32 @@ section h3 {
 }
 
 section h3::after {
+    content: ""; /* Elemento decorativo */
+    position: absolute; 
+    width: 60px; /* Longitud de la línea decorativa */
+    height: 4px; /* Grosor de la línea */
+    background-color: #696969; /* Color destacado (puedes cambiarlo) */
+    bottom: -5px; /* Posición debajo del texto */
+    left: 50%; /* Centrar la línea */
+    transform: translateX(-50%); /* Ajustar para que quede perfectamente centrado */
+    border-radius: 2px; /* Bordes redondeados para un acabado más limpio */
+}
+
+/* Estilo para el título h1 dentro de la sección #about */
+#about h1 {
+    font-size: 1.5rem; /* Tamaño grande para destacar */
+    margin: 20px 0; /* Espaciado superior e inferior */
+    text-align: center; /* Centrar el texto */
+    color: #333; /* Color elegante y legible */
+    font-weight: bold; /* Texto en negrita */
+    font-family: 'Poppins', sans-serif; /* Fuente moderna y profesional */
+    text-transform: uppercase; /* Convertir el texto a mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    position: relative; /* Para el subrayado decorativo */
+}
+
+/* Línea decorativa debajo del título */
+#about h1::after {
     content: ""; /* Elemento decorativo */
     position: absolute; 
     width: 60px; /* Longitud de la línea decorativa */
@@ -452,7 +505,7 @@ section p {
     content: "|"; /* Cursor */
     font-weight: bold;
     animation: blink 0.8s step-end infinite; /* Parpadeo del cursor */
-    color: rgb(98, 98, 98); /* Mismo color que el texto */
+    color: rgb(255, 255, 255); /* Mismo color que el texto */
     position: absolute;
     right: 0; /* Ubicado al final del texto */
 }
