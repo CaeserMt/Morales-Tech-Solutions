@@ -640,7 +640,7 @@ header nav ul li a:hover {
 .contact input, .contact textarea {
     padding: var(--spacing-small);
     margin-bottom: var(--spacing-medium);
-    border: 1px solid var(--color-hover);
+    border: 1px solid var(--color-primaria);
     border-radius: 5px;
     background-color: transparent; /* Fondo transparente */
     color: var(--color-texto);
@@ -652,7 +652,7 @@ header nav ul li a:hover {
 .contact h2 {
     text-align: center; /* Asegura que el texto esté centrado */
     margin-bottom: var(--spacing-medium); /* Añadir espacio por debajo */
-    color: var(--color-hover); /* Mantén el color */
+    color: var(--color-primaria); /* Mantén el color */
     font-family: var(--fuente-krona); /* Fuente Krona One */
     font-size: 2rem; /* Ajustar el tamaño de la fuente */
     text-transform: uppercase; /* Texto en mayúsculas */
