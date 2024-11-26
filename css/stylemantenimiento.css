@@ -580,3 +580,7 @@ section p {
     line-height: 1.5;
     color: #666;
 }
+.service-description p {
+    margin-top: 30px; /* Espacio superior entre párrafos */
+    margin-bottom: 10px; /* Espacio inferior entre párrafos */
+}
