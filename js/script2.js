@@ -7,6 +7,41 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    // Cargar el footer dinámicamente
+    const footerContainer = document.getElementById('footer');
+
+    if (footerContainer) {
+        fetch('footer.html')
+            .then(response => {
+                if (response.ok) {
+                    return response.text(); // Obtener el contenido como texto
+                } else {
+                    throw new Error(`Error al cargar el footer: ${response.statusText}`);
+                }
+            })
+            .then(data => {
+                footerContainer.innerHTML = data; // Insertar el contenido en el div
+            })
+            .catch(error => {
+                console.error('Error al cargar el footer:', error);
+            });
+    } else {
+        console.warn("No se encontró el contenedor del footer (#footer).");
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
 let currentIndex = 0;
 const slides = document.querySelectorAll('.slide');
 

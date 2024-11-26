@@ -33,6 +33,10 @@ button {
     margin-top: 20px; /* Espacio superior para que no tape el título */
     align-self: center; /* Centra el botón horizontalmente en su contenedor */
 }
+button.back-button {
+    margin-bottom: 40px; /* Ajusta el valor según sea necesario */
+}
+
 
 /* Estilos para asegurar que el contenido se vea bien */
 body {
