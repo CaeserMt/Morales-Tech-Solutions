@@ -220,6 +220,17 @@ header nav ul li a {
 .vision-mision-didactica .card-content ul li strong {
     color: var(--color-primaria);
 }
+.vision-mision-didactica h2 {
+    font-family: var(--fuente-krona); /* Usamos la misma fuente que para el h3 */
+    font-size: 1rem; /* Tamaño mayor para darle importancia */
+    color: var(--color-primaria); /* Color principal del sitio */
+    margin-bottom: 30px; /* Espacio debajo del título */
+    text-transform: uppercase; /* Texto en mayúsculas para darle énfasis */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    font-weight: bold; /* Hacer el texto más prominente */
+    border-bottom: 3px solid var(--color-primaria); /* Subrayado decorativo */
+    padding-bottom: 10px; /* Espacio entre el texto y el subrayado */
+}
 
 
 
@@ -243,6 +254,7 @@ header nav ul li a {
     display: flex;                 /* Flex para el contenido interno */
     flex-direction: column;        /* Colocar contenido en columna */
     align-items: center;           /* Centrar el contenido */
+    justify-content: space-between; /* Espacio uniforme entre los elementos */
     width: calc(25% - 40px);      /* Ancho de los bloques */
     margin: 20px;                 /* Espaciado entre bloques */
     border: 1px solid #ccc;       /* Borde del bloque */
@@ -263,7 +275,8 @@ header nav ul li a {
     /* margin: 10px 0;               /* Margen para el título */
      /* font-size: 1.2rem;            /* Tamaño del texto del título */
      color: var(--color-primaria);
-     font-size: 1.4rem;
+     font-size: 1.2rem;
+     text-align: center;
     margin: 0.5rem 0; /* Añadir márgenes uniformes arriba y abajo */
     font-weight: bold; /* Resaltar el título */
 }
@@ -271,13 +284,45 @@ header nav ul li a {
 .service-block p {
     /* font-size: 1rem;              /* Tamaño del texto del párrafo */
 
-    font-size: 1.0rem;
+    font-size: 0.8rem;
     line-height: 1.5; /* Ajustar el espacio entre líneas */
     color: #000000; /* Color de texto más suave para el párrafo */
-    margin-top: 1rem;
+    margin-top: 1.0rem;
     margin-bottom: 1.5rem;
     text-align: justify; /* Se agrego 21.10.2024 */ 
 
+}
+/* Asegurarse de que todos los botones tengan el mismo tamaño y alineación */
+.service-block button {
+    margin-top: auto; /* Empujar el botón al final del contenedor */
+    margin-bottom: 0; /* Asegurar que el margen inferior esté en cero */
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    background-color: #afafaf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Hacer que el botón ocupe todo el ancho disponible */
+    box-sizing: border-box; /* Incluir padding y border en el cálculo del tamaño total */
+}
+.service-block button:hover {
+    background-color: #000000; /* Color de fondo al pasar el ratón */
+}
+
+
+
+
+.services h5 {
+    font-family: var(--fuente-krona); /* Usamos la misma fuente que para el h3 */
+    font-size: 1rem; /* Tamaño mayor para darle importancia */
+    color: var(--color-primaria); /* Color principal del sitio */
+    margin-bottom: 30px; /* Espacio debajo del título */
+    text-transform: uppercase; /* Texto en mayúsculas para darle énfasis */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    font-weight: bold; /* Hacer el texto más prominente */
+    border-bottom: 3px solid var(--color-primaria); /* Subrayado decorativo */
+    padding-bottom: 10px; /* Espacio entre el texto y el subrayado */
 }
 
 /* Efecto al pasar el ratón */
