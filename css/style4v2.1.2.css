@@ -72,7 +72,7 @@ body, h1, h2, h3, p {
 
 header.navbar {
     padding: var(--spacing-small) 3%; /* Espaciado en el navbar */
-    background: linear-gradient(90deg, var(--color-hover), var(--color-hover));
+    background: linear-gradient(90deg, var(--color-hover), var(--color-A));
     display: flex;
     align-items: center; /* Alinear en el centro */
     /*position: fixed; /* Mantiene el menú en la parte superior */
@@ -377,7 +377,7 @@ header nav ul li a {
 .banner-slider {
     position: relative;
     width: 100%;
-    height: 60vh;
+    height: 70vh;
     overflow: hidden;
     perspective: 1000px; /* Añade profundidad para el efecto 3D */
 }
@@ -720,7 +720,7 @@ button p {
 
 /* Footer con íconos de redes sociales */
 footer {
-    background: linear-gradient(90deg, var(--color-hover), var(--color-hover));
+    background: linear-gradient(90deg, var(--color-hover), var(--color-A));
     color: var(--color-primaria);
     text-align: center;
     padding: var(--spacing-medium) 0;
