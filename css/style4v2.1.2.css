@@ -611,7 +611,7 @@ header nav ul li a:hover {
     margin-bottom: var(--spacing-medium);
     color: var(--color-primaria);
     text-transform: uppercase;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra de texto */
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7); /* Sombra de texto */
 }
 
 .about-us p, .services ul, .contact p, .contact form {

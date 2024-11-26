@@ -1,3 +1,24 @@
+:root {
+    --color-fondo: #ffffff
+    ; /* Fondo oscuro #8a8ad7*/
+    --color-primaria: #1a1e37; /* Azul profundo #97d0f1*/
+    --color-secundaria: #120907;
+    --color-S: #7a7a7a;
+    --color-A: #b9b9b9
+    ; /* Rojo vibrante #9772d2*/
+    --color-hover: #ffffff; /* Cian brillante */
+    --color-texto: #000000; /* Texto claro */
+    --color-shadow: rgba(0, 255, 212, 0.3); /* Sombra suave */
+
+    --fuente-krona: 'Krona One', sans-serif; /* Fuente para encabezados */
+    --fuente-montserrat: 'Montserrat', sans-serif; /* Fuente para texto */
+
+    --spacing-small: 10px; /* Espaciado pequeño */
+    --spacing-medium: 20px; /* Espaciado medio */
+    --spacing-large: 40px; /* Espaciado grande */
+    
+}
+
 /* Estilo para el botón */
 button {
     background-color: #007bff;
@@ -96,7 +117,7 @@ footer {
 
 /* Header */
 header {
-    background: linear-gradient(90deg, var(--color-primaria), var(--color-secundaria));
+    background: linear-gradient(90deg, var(--color-A), var(--color-hover));
     padding: 25px;
     text-align: center;
     position: relative; /* Cambiar a relative para poder posicionar el botón en el flujo */
