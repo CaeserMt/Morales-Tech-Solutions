@@ -1,0 +1,435 @@
+:root {
+    --color-fondo: #ffffff
+    ; /* Fondo oscuro #8a8ad7*/
+    --color-primaria: #1a1e37; /* Azul profundo #97d0f1*/
+    --color-secundaria: #120907;
+    --color-S: #7a7a7a;
+    --color-A: #b9b9b9
+    ; /* Rojo vibrante #9772d2*/
+    --color-hover: #ffffff; /* Cian brillante */
+    --color-texto: #000000; /* Texto claro */
+    --color-shadow: rgba(0, 255, 212, 0.3); /* Sombra suave */
+
+    --fuente-krona: 'Krona One', sans-serif; /* Fuente para encabezados */
+    --fuente-montserrat: 'Montserrat', sans-serif; /* Fuente para texto */
+
+    --spacing-small: 10px; /* Espaciado pequeño */
+    --spacing-medium: 20px; /* Espaciado medio */
+    --spacing-large: 40px; /* Espaciado grande */
+    
+}
+
+/* Estilo para el botón */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 20px; /* Espacio superior para que no tape el título */
+    align-self: center; /* Centra el botón horizontalmente en su contenedor */
+}
+
+/* Estilos para asegurar que el contenido se vea bien */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh; /* Para que el contenido ocupe al menos la altura completa de la pantalla */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenedor principal */
+main {
+    flex: 1; /* Hace que el main ocupe todo el espacio disponible */
+    padding: 20px;
+    text-align: justify; /* Justifica el texto en el contenido principal */
+}
+
+/*imagenes de la derecha y izquierda*/
+
+.main-content {
+    display: flex; /* Usar flexbox para el diseño */
+    align-items: stretch; /* Alinear elementos para que se estiren verticalmente */
+    justify-content: space-between; /* Espacio entre los elementos */
+    width: 100%; /* Asegurarse que ocupe el 100% del ancho */
+}
+
+.content-container {
+    flex: 1; /* Permitir que el contenedor de contenido crezca */
+    padding: 20px; /* Espaciado interno para el contenido */
+    max-width: 600px; /* Ancho máximo del contenido */
+}
+
+.side-image {
+    flex: 1; /* Las imágenes ocupan el espacio restante */
+    display: flex;
+    justify-content: center; /* Centrar imagen horizontalmente */
+    align-items: cover; /* Centrar imagen verticalmente */
+}
+
+.side-image img {
+    width: 85%; /* Asegurar que la imagen ocupe todo el contenedor */
+    height: auto; /* Mantener proporción de la imagen */
+    max-height: 90%; /* Limitar altura a no exceder su contenedor */
+    border-radius: 15px; /* Esquinas redondeadas */
+    transition: transform 0.3s; /* Animación para efecto de hover */
+}
+
+/* Efecto hover para hacer las imágenes más dinámicas */
+.side-image img:hover {
+    transform: scale(1.05); /* Escalar la imagen al pasar el mouse */
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    }
+
+    .content-container {
+        max-width: 100%; /* Permitir que el contenido ocupe todo el ancho */
+    }
+
+    .side-image {
+        margin: 10px 0; /* Margen para separar las imágenes del contenido */
+    }
+}
+
+
+
+
+
+
+
+/* Footer siempre al fondo */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, var(--color-A), var(--color-hover));
+    padding: 25px;
+    text-align: center;
+    position: relative; /* Cambiar a relative para poder posicionar el botón en el flujo */
+}
+
+h1 {
+    color: white;
+    margin: 0;
+    font-size: 1em;
+
+}
+
+/* Agrega este nuevo contenedor para título y botón */
+.title-button-container {
+    display: flex; /* Usa flexbox para alinear elementos */
+    flex-direction: column; /* Alinea en columna */
+    align-items: center; /* Centra horizontalmente */
+    margin-bottom: 20px; /* Espacio debajo de la sección del título */
+}
+
+section h2 {
+    font-size: 1.8rem; /* Título secundario */
+    margin: 20px 0 10px; /* Espacio alrededor */
+    text-align: justify; /* Justifica el texto del título */
+}
+
+section h3 {
+    font-size: 1.5rem; /* Título de servicios */
+    margin: 15px 0; /* Espacio alrededor */
+    text-align: justify; /* Justifica el texto del título */
+}
+
+section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 10px 0;
+    text-align: justify; /* Justifica el texto del párrafo */
+}
+
+/* Estilos para la galería de imágenes */
+.image-gallery {
+    display: flex; /* Alinear imágenes en una fila */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    margin: 20px 0; /* Espaciado superior e inferior para la galería */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en filas múltiples */
+}
+
+.gallery-slides {
+    display: flex; /* Alinea los elementos en una fila */
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten */
+    justify-content: center; /* Centra el contenido */
+    flex-direction: row; /* Por defecto, las imágenes están en fila */
+}
+
+.gallery-slide {
+    
+    flex: 1 1 calc(25% - 40px); /* Se ajusta a 25% del ancho del contenedor con margen */
+
+    position: relative; /* Permite que los elementos secundarios se posicionen en relación con este */
+    margin: 10px; /* Espacio entre las imágenes */
+    max-width: 300px; /* Tamaño máximo */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transiciones suaves */
+    flex: 1 1 calc(33.333% - 20px); /* Ocupa 1/3 del ancho del contenedor con margen */
+}
+
+.gallery-slide img {
+    
+    width: 100%; /* Ajusta el tamaño de las imágenes según sea necesario */
+    height: 100px; /* Mantiene la proporción de la imagen */
+    border-radius: 8px; /* Bordes redondeados */
+
+    object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+}
+
+/* Efecto de hover en las imágenes */
+.gallery-slide:hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar el mouse */
+    opacity: 0.9; /* Cambia la opacidad al pasar el mouse */
+}
+
+.gallery-text {
+    position: absolute; /* Posiciona el texto encima de la imagen */
+    bottom: 10px; /* Espacio desde el fondo */
+    left: 10px; /* Espacio desde la izquierda */
+    color: white; /* Color del texto */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    padding: 5px; /* Espaciado interno */
+    border-radius: 4px; /* Bordes redondeados para el fondo */
+    transition: opacity 0.3s ease; /* Transición suave para la opacidad del texto */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+}
+
+.gallery-slide:hover .gallery-text {
+    opacity: 1; /* Mantiene la opacidad del texto al pasar el mouse */
+}
+
+.footer-section {
+    text-align: center; /* Centra el texto en el pie de página */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem; /* Tamaño más pequeño en pantallas pequeñas */
+    }
+
+    section h2 {
+        font-size: 1.5rem; /* Tamaño más pequeño en pantallas pequeñas */
+    }
+
+    section h3 {
+        font-size: 1.2rem; /* Tamaño más pequeño en pantallas pequeñas */
+    }
+
+    section p {
+        font-size: 1rem; /* Tamaño más pequeño en pantallas pequeñas */
+    }
+
+    .gallery-slides {
+        
+        flex-direction: auto; /* Cambia a vertical en pantallas más pequeñas */
+        align-items: center; /* Centra las imágenes */
+    }
+
+    .gallery-slide img {
+        
+        width: 100%; /* Ocupar todo el ancho disponible AQUIII ES MODIFICAR */
+        max-width: 100%; /* Elimina el límite de tamaño máximo */
+        height: auto; /* Mantener proporciones */
+        object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+
+
+        
+        
+    }
+    
+    button {
+        font-size: 0.8rem; /* Tamaño de fuente más pequeño para el botón */
+        padding: 8px 10px; /* Menos padding para el botón */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2rem; /* Tamaño aún más pequeño en pantallas muy pequeñas */
+    }
+
+    section h2 {
+        font-size: 1.2rem; /* Tamaño aún más pequeño en pantallas muy pequeñas */
+    }
+
+    section p {
+        font-size: 0.9rem; /* Tamaño aún más pequeño en pantallas muy pequeñas */
+    }
+
+
+    button {
+        font-size: 0.8rem; /* Tamaño de fuente más pequeño para el botón */
+        padding: 8px 10px; /* Menos padding para el botón */
+    }
+    
+.image-gallery {
+    display: flex; /* Alinear imágenes en una fila */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    margin: 20px 0; /* Espaciado superior e inferior para la galería */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en filas múltiples */
+}
+
+.gallery-slides {
+    display: flex; /* Alinea los elementos en una fila */
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten */
+    justify-content: center; /* Centra el contenido */
+    flex-direction: row; /* Por defecto, las imágenes están en fila */
+}
+
+.gallery-slide {
+    position: relative; /* Permite que los elementos secundarios se posicionen en relación con este */
+    margin: 10px; /* Espacio entre las imágenes */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transiciones suaves */
+}
+
+.gallery-slide img {
+    width: 300px; /* Ajusta el tamaño de las imágenes según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+
+
+}
+/* Estilos del Lightbox */
+.lightbox {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 999; /* Asegúrate de que aparezca sobre todo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-color: rgba(0,0,0,0.9); /* Fondo oscuro */
+}
+
+.lightbox-content {
+    margin: auto;
+    /*display: block; */
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; 
+    /* Adapta la imagen para llenar el contenedor sin fondo vacío */
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.content-container {
+    
+    
+   /* border: 3px solid #ebe5eb; /* Borde del contenedor */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 40px; /* Espaciado interno */
+    margin: 20px auto; /* Espaciado superior e inferior y centrado */
+    max-width: 800px; /* Ancho máximo del contenedor */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+}
+
+
+
+
+
+
+/* PRESENTACION MANTENIMIENTO/*
+
+/* Pantalla de introducción */
+.intro-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(120deg, #000428, #004e92);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#typed-text {
+    font-size: 2.5em;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInText 3s forwards;
+}
+
+/* Texto central en la pantalla de introducción */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Transición al contenido principal */
+#content {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
